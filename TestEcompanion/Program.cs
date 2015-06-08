@@ -21,6 +21,8 @@ namespace TestEcompanion
 		private const string Password = "notasecret";
 		private const string StrYes = "yes";
 		private const string StrNo = "no";
+		private const int ProgressWaitingTime = 60000;
+		
 
 		// ReSharper disable once UnusedParameter.Local
 		public static void Main(string[] args)
@@ -116,8 +118,8 @@ namespace TestEcompanion
 
 				if (getResponse.TrainingStatus.Equals("RUNNING"))
 				{
-					Console.WriteLine("The model training is still in progress.");
-					Thread.Sleep(10000);
+					Console.WriteLine("The model training is still in progress, let us wait for {0} ms.", ProgressWaitingTime);
+					Thread.Sleep(ProgressWaitingTime);
 				}
 				else if (getResponse.TrainingStatus.Equals("DONE"))
 				{
