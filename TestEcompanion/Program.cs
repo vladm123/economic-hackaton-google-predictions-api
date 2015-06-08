@@ -22,7 +22,6 @@ namespace TestEcompanion
 		private const string StrYes = "yes";
 		private const string StrNo = "no";
 		private const int ProgressWaitingTime = 60000;
-		
 
 		// ReSharper disable once UnusedParameter.Local
 		public static void Main(string[] args)
