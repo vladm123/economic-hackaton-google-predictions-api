@@ -126,10 +126,6 @@ namespace TestEcompanion
 					Console.WriteLine("The model has been trained successfully.");
 					break;
 				}
-				else if (getResponse.TrainingStatus.Equals("ERROR"))
-				{
-					throw new Exception("an unknown error.");
-				}
 				else if (getResponse.TrainingStatus.Equals("ERROR: TRAINING JOB NOT FOUND"))
 				{
 					throw new Exception("the training job was not found.");
@@ -137,6 +133,10 @@ namespace TestEcompanion
 				else if (getResponse.TrainingStatus.Equals("ERROR: TOO FEW INSTANCES IN DATASET"))
 				{
 					throw new Exception("there are too few instances in the dataset.");
+				}
+				else
+				{
+					throw new Exception("an unknown error.");
 				}
 			}
 
