@@ -1,0 +1,2 @@
+# economic-hackaton-google-predictions-api
+A simple stub for connecting Google Predictions API - to be used for the e-conomic hackaton
